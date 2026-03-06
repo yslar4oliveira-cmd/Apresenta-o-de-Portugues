@@ -1,1 +1,0 @@
-# Apresenta-o-de-Portugues

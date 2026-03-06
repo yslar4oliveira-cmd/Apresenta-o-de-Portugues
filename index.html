@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariana - Apresentação Interativa</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <script src="https://threejs.org/build/three.min.js"></script>
+</head>
+<body>
+    <!-- Background com partículas -->
+    <div class="background-container">
+        <div class="particles"></div>
+        <canvas id="canvas-bg"></canvas>
+    </div>
+
+    <!-- Página 1: CAPA -->
+    <section class="book-page page-1" id="page-1">
+        <div class="page-content cover-page">
+            <div class="cover-animation">
+                <h1 class="main-title">MARIANA</h1>
+                <div class="subtitle-wrapper">
+                    <p class="subtitle">Uma Jornada pela Essência de uma Personagem</p>
+                    <div class="decorative-line"></div>
+                </div>
+            </div>
+            <div class="scroll-hint">
+                <span class="arrow-down"></span>
+                <p>Folheie para continuar</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Página 2: IDENTIFICAÇÃO DA MARIANA -->
+    <section class="book-page page-2" id="page-2">
+        <div class="page-content">
+            <div class="page-header">
+                <h2 class="page-title">Identificação</h2>
+                <div class="page-number">01</div>
+            </div>
+            <div class="content-wrapper">
+                <div class="text-block animated-text">
+                    <h3>Quem é Mariana?</h3>
+                    <p>
+                        Mariana é uma personagem central na narrativa, uma jovem mulher cuja identidade é moldada por suas vivências, relacionamentos e valores pessoais. Ela representa a complexidade da experiência humana, navegando entre o mundo das expectativas sociais e seus próprios desejos.
+                    </p>
+                    <p>
+                        Sua jornada é marcada por momentos de auto-descoberta, conflitos emocionais e transformações profundas que revelam a profundidade de seu caráter.
+                    </p>
+                </div>
+                <div class="info-cards-wrapper">
+                    <div class="info-card card-1">
+                        <div class="card-icon">👤</div>
+                        <h4>Nome</h4>
+                        <p>Mariana</p>
+                    </div>
+                    <div class="info-card card-2">
+                        <div class="card-icon">⏳</div>
+                        <h4>Período</h4>
+                        <p>Juventude à Maturidade</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Página 3: APROFUNDAMENTO CARACTERIZAÇÃO -->
+    <section class="book-page page-3" id="page-3">
+        <div class="page-content">
+            <div class="page-header">
+                <h2 class="page-title">Caracterização</h2>
+                <div class="page-number">02</div>
+            </div>
+            <div class="content-wrapper">
+                <div class="character-deep-info">
+                    <div class="info-column">
+                        <h3>Personalidade</h3>
+                        <ul class="characteristics-list">
+                            <li><span class="bullet">✦</span> Sensível e empática</li>
+                            <li><span class="bullet">✦</span> Inteligente e observadora</li>
+                            <li><span class="bullet">✦</span> Resiliente e determinada</li>
+                            <li><span class="bullet">✦</span> Conflituada emocionalmente</li>
+                            <li><span class="bullet">✦</span> Introspectiva e reflexiva</li>
+                        </ul>
+                    </div>
+                    <div class="info-column">
+                        <h3>Motivações</h3>
+                        <ul class="characteristics-list">
+                            <li><span class="bullet">✦</span> Buscar compreensão e aceitação</li>
+                            <li><span class="bullet">✦</span> Resolver conflitos internos</li>
+                            <li><span class="bullet">✦</span> Manter relacionamentos significativos</li>
+                            <li><span class="bullet">✦</span> Encontrar seu próprio caminho</li>
+                            <li><span class="bullet">✦</span> Equilibrar dever e desejo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Página 4: CARACTERIZAÇÃO FÍSICA -->
+    <section class="book-page page-4" id="page-4">
+        <div class="page-content">
+            <div class="page-header">
+                <h2 class="page-title">Aparência Física</h2>
+                <div class="page-number">03</div>
+            </div>
+            <div class="content-wrapper physical-appearance">
+                <div class="appearance-image">
+                    <div class="image-frame">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=600&fit=crop" alt="Mariana" class="character-image">
+                    </div>
+                </div>
+                <div class="appearance-text">
+                    <h3>Visual e Estilo</h3>
+                    <p>
+                        Mariana apresenta uma aparência refinada e elegante. Seus olhos revelam profundidade emocional e inteligência. Seu porte é altivo, transmitindo tanto fragilidade quanto força.
+                    </p>
+                    <div class="appearance-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Cabelo:</span>
+                            <span class="detail-value">Longo e bem cuidado</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Olhos:</span>
+                            <span class="detail-value">Expressivos e perspicazes</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Porte:</span>
+                            <span class="detail-value">Elegante e confiante</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Estilo:</span>
+                            <span class="detail-value">Refinado e sofisticado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Página 5: VALORES DA MARIANA -->
+    <section class="book-page page-5" id="page-5">
+        <div class="page-content">
+            <div class="page-header">
+                <h2 class="page-title">Valores e Princípios</h2>
+                <div class="page-number">04</div>
+            </div>
+            <div class="content-wrapper">
+                <div class="values-grid">
+                    <div class="value-card value-1">
+                        <div class="value-icon">💎</div>
+                        <h4>Honestidade</h4>
+                        <p>Mariana valoriza a verdade e a autenticidade em seus relacionamentos e com ela mesma.</p>
+                    </div>
+                    <div class="value-card value-2">
+                        <div class="value-icon">❤️</div>
+                        <h4>Lealdade</h4>
+                        <p>Ela é fiel àqueles que ama, mantendo seus compromissos mesmo diante de dificuldades.</p>
+                    </div>
+                    <div class="value-card value-3">
+                        <div class="value-icon">🌟</div>
+                        <h4>Liberdade</h4>
+                        <p>Busca agir conforme sua consciência, mesmo que isso signifique enfrentar pressões externas.</p>
+                    </div>
+                    <div class="value-card value-4">
+                        <div class="value-icon">🔥</div>
+                        <h4>Coragem</h4>
+                        <p>Enfrenta seus medos e conflitos com determinação, buscando crescimento pessoal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Página 6: CHAT MARIANA E PAI -->
+    <section class="book-page page-6" id="page-6">
+        <div class="page-content">
+            <div class="page-header">
+                <h2 class="page-title">Mariana & Seu Pai</h2>
+                <div class="page-number">05</div>
+            </div>
+            <div class="content-wrapper">
+                <div class="chat-section">
+                    <div class="chat-container">
+                        <div class="chat-message received">
+                            <p>Mariana, você parece distante ultimamente...</p>
+                        </div>
+                        <div class="chat-message sent">
+                            <p>Pai, só estou tentando descobrir quem sou realmente.</p>
+                        </div>
+                        <div class="chat-message received">
+                            <p>Eu entendo. Mas lembre-se que você nunca está sozinha.</p>
+                        </div>
+                        <div class="chat-message sent">
+                            <p>Eu sei. E isso significa tudo para mim.</p>
+                        </div>
+                    </div>
+                    <div class="chat-explanation">
+                        <h4>A Relação com o Pai</h4>
+                        <p>
+                            Seu relacionamento com o pai é baseado em amor profundo e respeito mútuo. Ele representa a segurança, a sabedoria e o apoio incondicional. Mariana busca sua aprovação, mas também sua compreensão de suas escolhas pessoais.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Página 7: CHAT MARIANA E TERESA -->
+    <section class="book-page page-7" id="page-7">
+        <div class="page-content">
+            <div class="page-header">
+                <h2 class="page-title">Mariana & Teresa</h2>
+                <div class="page-number">06</div>
+            </div>
+            <div class="content-wrapper">
+                <div class="chat-section">
+                    <div class="chat-container">
+                        <div class="chat-message received">
+                            <p>Você foi muito corajosa em falar a verdade!</p>
+                        </div>
+                        <div class="chat-message sent">
+                            <p>Precisava fazer isso. Você me deu força para isso.</p>
+                        </div>
+                        <div class="chat-message received">
+                            <p>Sempre estarei ao seu lado, minha amiga.</p>
+                        </div>
+                        <div class="chat-message sent">
+                            <p>Obrigada por acreditar em mim quando eu mesma duvidava.</p>
+                        </div>
+                    </div>
+                    <div class="chat-explanation">
+                        <h4>A Amizade com Teresa</h4>
+                        <p>
+                            Teresa é sua confidente e apoiadora. Essa amizade representa o dote emocional que permite a Mariana ser vulnerável e autêntica. Juntas, elas enfrentam desafios e celebram triunfos, formando um vínculo inabalável.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Página 8: CHAT MARIANA E SIMÃO -->
+    <section class="book-page page-8" id="page-8">
+        <div class="page-content">
+            <div class="page-header">
+                <h2 class="page-title">Mariana & Simão</h2>
+                <div class="page-number">07</div>
+            </div>
+            <div class="content-wrapper">
+                <div class="chat-section">
+                    <div class="chat-container">
+                        <div class="chat-message received">
+                            <p>Mariana, você significa muito para mim.</p>
+                        </div>
+                        <div class="chat-message sent">
+                            <p>Simão, preciso ser honesta com você... e comigo mesma.</p>
+                        </div>
+                        <div class="chat-message received">
+                            <p>Então fale. Eu te ouço sem julgamentos.</p>
+                        </div>
+                        <div class="chat-message sent">
+                            <p>Isso é exatamente o que eu precisava ouvir.</p>
+                        </div>
+                    </div>
+                    <div class="chat-explanation">
+                        <h4>O Relacionamento com Simão</h4>
+                        <p>
+                            Simão representa um ponto de inflexão emocional para Mariana. Seu relacionamento desperta sentimentos conflituosos, forçando-a a confrontar seus próprios desejos versus obrigações. Essa dinâmica é crucial para seu desenvolvimento pessoal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Página 9: SE FOSSE UMA COR -->
+    <section class="book-page page-9" id="page-9">
+        <div class="page-content color-page">
+            <div class="page-header">
+                <h2 class="page-title">Se Mariana fosse uma Cor</h2>
+                <div class="page-number">08</div>
+            </div>
+            <div class="content-wrapper color-content">
+                <div class="color-visual">
+                    <div class="color-circle crimson"></div>
+                </div>
+                <div class="color-explanation">
+                    <h3>Vermelho Profundo</h3>
+                    <p>
+                        Um vermelho profundo e sofisticado, como o vinho tinto envelhecido. Essa cor representa a intensidade emocional de Mariana, sua paixão contida, sua força e determinação.
+                    </p>
+                    <p>
+                        O vermelho também simboliza:
+                    </p>
+                    <ul class="color-meanings">
+                        <li><span>🔴</span> Emoção e paixão profunda</li>
+                        <li><span>🔴</span> Força e resiliência</li>
+                        <li><span>🔴</span> Coragem em face dos desafios</li>
+                        <li><span>🔴</span> Amor genuíno e lealdade</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Página 10: SE FOSSE UMA OBRA DE ARTE -->
+    <section class="book-page page-10" id="page-10">
+        <div class="page-content art-page">
+            <div class="page-header">
+                <h2 class="page-title">Se Mariana fosse uma Obra de Arte</h2>
+                <div class="page-number">09</div>
+            </div>
+            <div class="content-wrapper art-content">
+                <div class="artwork-display">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" alt="Noite Estrelada" class="artwork-image">
+                </div>
+                <div class="artwork-explanation">
+                    <h3>"A Noite Estrelada" de Van Gogh</h3>
+                    <p>
+                        Assim como a obra de Van Gogh, Mariana é uma composição de contradições: simultaneamente calmante e turbulenta, escura e luminosa, pequena e imensa.
+                    </p>
+                    <p>
+                        A pintura com seus redemoinhos e estrelas cintilantes captura a essência de Mariana - uma mulher em movimento, em transformação, buscando luz mesmo nas trevas. Seus sentimentos não seguem linhas retas, mas sim padrões complexos e belos.
+                    </p>
+                    <ul class="art-parallels">
+                        <li><span>🎨</span> Turbulência emocional expressa em beleza</li>
+                        <li><span>🎨</span> Luz buscando espaço na escuridão</li>
+                        <li><span>🎨</span> Movimento e transformação constante</li>
+                        <li><span>🎨</span> Alma apaixonada e sensível</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Página 11: CONCLUSÃO -->
+    <section class="book-page page-11 final-page" id="page-11">
+        <div class="page-content conclusion-page">
+            <div class="conclusion-content">
+                <h2 class="conclusion-title">Conclusão</h2>
+                <div class="conclusion-text">
+                    <p>
+                        Mariana é mais do que uma simples personagem. Ela é um espelho de nossas próprias conflitos, aspirações e lutas internas. Sua jornada nos ensina sobre a importância da autenticidade, da coragem de enfrentar nossas sombras e da beleza que surge quando nos permitimos ser verdadeiramente nós mesmos.
+                    </p>
+                    <p>
+                        Ao longo desta apresentação, exploramos sua identidade, seus valores, seus relacionamentos e a riqueza emocional que a define. Mariana nos lembra que a complexidade humana não é uma fraqueza, mas sim a fonte de nossa maior força.
+                    </p>
+                    <p class="final-message">
+                        "Ser Mariana é ser um poema vivo, com verso e contra-verso, luz e sombra, um eterno questionar-se em busca da verdade."
+                    </p>
+                </div>
+            </div>
+            <div class="book-end-decoration">
+                <div class="end-ornament"></div>
+                <p class="end-text">Fim da Apresentação</p>
+                <div class="end-ornament"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
